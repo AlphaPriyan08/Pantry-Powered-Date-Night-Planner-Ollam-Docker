@@ -1,0 +1,46 @@
+# .dockerignore
+
+# --- Virtual Environments ---
+# These folders contain a copy of the Python interpreter and all installed
+# libraries for local development. They can be very large and are irrelevant
+# to the container, which builds its own environment from requirements.txt.
+venv/
+.venv/
+env/
+.env/
+
+# --- Environment Variables ---
+# CRITICAL: Never copy your .env file into a Docker image.
+# It contains secrets like API keys which would be exposed.
+.env
+*.env
+
+# --- Python Cache & Compiled Files ---
+# These are auto-generated files that can bloat the image and cause
+# potential conflicts between different OS/Python versions.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE / Editor Configuration ---
+# Your personal editor settings have no place in the production image.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Streamlit Configuration ---
+# This folder stores local user configuration and credentials for Streamlit,
+# not needed in the container.
+.streamlit/
+
+# --- Git ---
+# The .git directory contains the entire version history and can be huge.
+# It should never be included in the final image. (Note: Modern Docker
+# versions often ignore this by default, but it's good practice to be explicit).
+.git/
+
+# --- Log files ---
+# Application logs should not be part of the image.
+*.log

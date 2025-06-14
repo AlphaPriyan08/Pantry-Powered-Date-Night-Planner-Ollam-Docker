@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # This is the name of our service, you can call it whatever you like
+  date-night-planner:
+    # Build the Docker image from the Dockerfile in the current directory
+    build: .
+    # Name the container for easier identification
+    container_name: date-night-planner-app
+    # Map port 8501 on your host machine to port 8501 in the container
+    ports:
+      - "8501:8501"
+    # This is the magic part!
+    # It adds an entry to the container's hosts file, mapping
+    # 'host.docker.internal' to the host machine's gateway IP.
+    # This is what allows the container to reach the Ollama server on your host.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
