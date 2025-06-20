@@ -1,5 +1,7 @@
 streamlit
 langchain
 langchain-core
-langchain-community 
-ollama
+langchain-community  # For Ollama integration
+python-dotenv
+Pillow               # For image handling
+pypdf   

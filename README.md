@@ -18,6 +18,16 @@ The agent doesn't just give you a recipe; it acts as a "romance concierge," help
 
 ---
 
+## 📂 Available Versions
+
+### 1. [Google Gemini API Version](https://github.com/AlphaPriyan08/Pantry-Powered-Date-Night-Planner)
+Runs using the `gemini-1.5-flash` model via Google's Generative AI API. Requires a Google API key.
+
+### 2. [Ollama + Docker Local Version (This Repo)](https://github.com/AlphaPriyan08/Pantry-Powered-Date-Night-Planner-Ollama-Docker)
+Runs entirely on your machine using [Ollama](https://ollama.com/) and Docker. No API keys required. 100% local and private.
+
+---
+
 ## 🛠️ Tech Stack
 
 -   **LLM Framework:** LangChain – Used to orchestrate the agent's logic, manage memory, and chain prompts.
@@ -48,10 +58,10 @@ These instructions will help you set up and run the project on your local machin
 2.  **Clone the repository:**
     Get the project files onto your machine.
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/AlphaPriyan08/Pantry-Powered-Date-Night-Planner-Ollama-Docker
+    cd Pantry-Powered-Date-Night-Planner-Ollama-Docker
     ```
-    *(Remember to replace `your-username` and `your-repo-name` with your actual GitHub details!)*
+
 
 3.  **Build and run the application with Docker Compose:**
     This single command builds the container and starts the application.
